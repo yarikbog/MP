@@ -1,1 +1,36 @@
-ISDMFKSMFD
+$ docker volume ls
+DRIVER VOLUME NAME
+local 8bda345c875c99d61f9646a9b0922934a7eaab83366c04159f6023654237f090
+local data-sql
+local data-www
+Где физически расположены тома, мы уже знаем. Так что посмотрим содержимое нового тома:
+$ cd ~
+$ sudo ls
+/var/lib/docker/volumes/8bda345c875c99d61f9646a9b0922934a7eaab83366c04159f6023654237f0
+90/_data/
+
+Это содержимое каталога /etc контейнера. Так что мы можем, используя инструкцию VOLUME, сохранять на
+основной системе любые директории контейнера. И при удалении контейнера тома будут по-прежнему
+существовать. Впрочем, можно вместе с удалением контейнера удалить и связанный с ним том:
+
+docker run -it --name some-name ubuntu:latest /bin/bash \\запуск контенера в интерактивном режиме с указани>
+/каталога хранения bla
+
+docker build . --tag apache-php72
+docker run -p 8080:80 apache-php72
+ docker-compose up
+
+docker images
+docker pa -a
+
+<HTML>
+<BODY BGCOLOR="FFFFFF">
+<HR>
+<H1>YarikBog Docker Demo <H1>
+Send me mail at <a href="mailto:yarikbog05@gmail.com"> yarikbog05@gmail.com </a>.
+<HR>
+</BODY>
+</HTML>
+
+
+
